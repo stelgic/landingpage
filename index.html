@@ -12,9 +12,9 @@
             background-color: #f4f4f4;
         }
         .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 0 20px;
+            width: 90%;
+            margin: 5px auto;
+            padding: 0 10px;
             text-align: center;
         }
         h1 {
@@ -22,28 +22,66 @@
         }
         p {
             color: #666;
-            line-height: 1.6;
+            line-height: 1;
         }
-        .cta-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+        .slideshow-container {
+            max-width: 67%;
+            position: relative;
+            margin: auto;
         }
-        .cta-button:hover {
-            background-color: #0056b3;
+        .mySlides {
+            display: none;
+        }
+        .slideshow-container img {
+            width: 100%;
+            height: auto;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
         }
         .footer {
             position: fixed;
             left: 0;
             bottom: 0;
             width: 100%;
-            padding: 10px 20px;
+            padding: 5px 20px;
             background-color: #f4f4f4;
             color: #666;
+            font-size: 12px;
             text-align: left;
         }
     </style>
@@ -53,8 +91,45 @@
         <h1>Artificial Intelligence In Finance</h1>
         <p>Enabling seamlessly automation in Financial Trading using the power of Big Data, AI and ML.</p>
     </div>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <img src="images/qcraftor_dashboard_v027.JPG" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/qcraftor_dashboard_v019.JPG" style="width:100%">
+        </div>
+        <div class="mySlides fade">
+            <img src="images/qcraftor_dashboard_v020.JPG" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
     <div class="footer">
         <p>Copyright © 2023 STELGIC FinTech - All Rights Reserved.</p>
     </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+    
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex-1].style.display = "block";
+        }
+    </script>
 </body>
 </html>
