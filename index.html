@@ -10,6 +10,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            overflow-x: hidden;
         }
         .container {
             width: 90%;
@@ -24,8 +25,13 @@
             color: #666;
             line-height: 1;
         }
+        .description {
+            width: 60%;
+            margin: auto;
+            text-align: center;
+        }
         .slideshow-container {
-            max-width: 67%;
+            max-width: 80%;
             position: relative;
             margin: auto;
         }
@@ -74,7 +80,7 @@
             top: 0;
         }
         .footer {
-            position: fixed;
+            position: relative;
             left: 0;
             bottom: 0;
             width: 100%;
@@ -90,19 +96,22 @@
     <div class="container">
         <h1>Artificial Intelligence In Finance</h1>
         <p>Enabling seamlessly automation in Financial Trading using the power of Big Data, AI and ML.</p>
-    </div>
-    <div class="slideshow-container">
-        <div class="mySlides fade">
-            <img src="images/qcraftor_dashboard_v027.JPG" style="width:100%">
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="images/qcraftor_dashboard_v027.JPG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/qcraftor_dashboard_v028.JPG" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="images/qcraftor_dashboard_v029.JPG" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-        <div class="mySlides fade">
-            <img src="images/qcraftor_dashboard_v028.JPG" style="width:100%">
+        <div class="description">
+            <p>At STELGIC we are developing an innovate Deep Tech solution with integrated AI/ML environment for Research, Development and Deployment of automated trading Strategies in Financial Markets.</p>
         </div>
-        <div class="mySlides fade">
-            <img src="images/qcraftor_dashboard_v029.JPG" style="width:100%">
-        </div>
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <div class="footer">
         <p>Copyright © 2023 STELGIC FinTech - All Rights Reserved.</p>
